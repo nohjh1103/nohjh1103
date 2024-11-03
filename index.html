@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기대학교 길찾기</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Dtm8yWVBGvBZUbe-9vojrKKAAb0bYmw&libraries=places&callback=initMap" async></script>
+    <style>
+        #map {
+            height: 80vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>경기대학교 길찾기</h1>
+    <div id="map"></div>
+
+    <!-- 출발지 및 목적지 설정 -->
+    <label for="start-location">출발지 선택:</label>
+    <select id="start-location">
+        <option value="">지도에서 클릭</option>
+        <option value="37.298000,127.037000">덕문관</option>
+        <option value="37.295500,127.039500">종합강의동</option>
+        <option value="37.297000,127.038000">집현관</option>
+        <option value="37.300091,127.035000">진리관</option>
+        <option value="37.299500,127.035500">성신관</option>
+        <option value="37.299000,127.036000">애경관</option>
+        <option value="37.298500,127.036500">예지관</option>
+        <option value="37.297500,127.037500">광교관</option>
+        <option value="37.296500,127.038500">육영관</option>
+        <option value="37.296000,127.039000">호연관</option>
+    </select>
+    
+    <label for="destination">목적지 선택:</label>
+    <select id="destination">
+        <option value="37.298000,127.037000">덕문관</option>
+        <option value="37.295500,127.039500">종합강의동</option>
+        <option value="37.297000,127.038000">집현관</option>
+        <option value="37.300091,127.035000">진리관</option>
+        <option value="37.299500,127.035500">성신관</option>
+        <option value="37.299000,127.036000">애경관</option>
+        <option value="37.298500,127.036500">예지관</option>
+        <option value="37.297500,127.037500">광교관</option>
+        <option value="37.296500,127.038500">육영관</option>
+        <option value="37.296000,127.039000">호연관</option>
+    </select>
+
+    <button onclick="findRoute()">길찾기</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
